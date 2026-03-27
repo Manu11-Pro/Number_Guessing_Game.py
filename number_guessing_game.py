@@ -14,12 +14,13 @@ while True:
         if user_guess == num_to_guess:
                 print("You Guessed the Correct Number!")
                 break
-        elif user_guess >  num_to_guess:
+
+        no_user_guess += 1
+        if user_guess >  num_to_guess:
                 print("Too high!")
-                no_user_guess += 1
         elif user_guess <  num_to_guess:
                 print("Too low!")
-                no_user_guess += 1
+                
         if no_user_guess == no_tries_wanted:
                 print("You have guessed too many times!")
                 print(f"The number was {num_to_guess}")
